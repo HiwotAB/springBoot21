@@ -30,7 +30,7 @@
                                     <legend align="Center">Please Enter Your Information</legend>
                                     <input type="hidden" th:field="*{id}" />
 
-                                    <div  th:if="${#fields.hasErrors('selectVal')}" th:errors="*{selectVal}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('selectVal')}" th:errors="*{selectVal}" class="well alert alert-danger" role="alert">Select one of them!</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Role Type</label>
                                         <div class="col-md-4 inputGroupContainer">
@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <!-- Text input-->
-                                    <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert">First Name has error!</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">First Name</label>
                                         <div class="col-md-4 inputGroupContainer">
@@ -56,7 +56,7 @@
                                         </div>
                                     </div>
                                     <!-- Text input-->
-                                    <div  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert">Last Name has error</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Last Name</label>
                                         <div class="col-md-4 inputGroupContainer">
@@ -67,7 +67,7 @@
                                         </div>
                                     </div>
                                     <!-- Text input-->
-                                    <div  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert">Email has error</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">E-Mail</label>
                                         <div class="col-md-4 inputGroupContainer">
@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div  th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="well alert alert-danger" role="alert">User Name has error</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Username</label>
                                         <div class="col-md-4 inputGroupContainer">
@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div  th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="well alert alert-danger" role="alert"></div>
+                                    <div  th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="well alert alert-danger" role="alert">Password has error</div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Last Name</label>
                                         <div class="col-md-4 inputGroupContainer">
