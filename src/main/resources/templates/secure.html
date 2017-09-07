@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: header">
+    <title>Home Page</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="container text-center">
+
+            <h1>Secure Page</h1>
+                <a href="/logout">Secure Page</a>
+        </div>
+    </section>
+    <div th:replace="base :: javaScript"></div>
+    <div th:replace="base :: footer"></div>
+</body>
+</html>

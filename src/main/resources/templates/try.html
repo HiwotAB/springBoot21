@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Website CSS style -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/try.css>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>Admin</title>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container text-center">
+<div class="container">
+    <div class="row main">
+        <div class="main-login main-center">
+            <form autocomplete="off" class="well form-horizontal"
+                  action="#"
+                  th:action="@{/signUpForm}"
+                  method="post"
+                  th:object="${newUser}">
+
+                <legend>Sign Up</legend>
+                <input type="hidden" th:field="*{id}" />
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">First Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert"></div>
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input  th:field="*{firstname}" name="firstname" placeholder="Enter First Name" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Last Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <div  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert"></div>
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input  th:field="*{lastname}" name="lastname" placeholder="Enter Last Name" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Your Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <div  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert"></div>
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input  th:field="*{email}" name="email" placeholder="Enter E-Mail" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Username</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <div  th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="well alert alert-danger" role="alert"></div>
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input  th:field="*{username}" name="username" placeholder="Enter User Name" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <div  th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="well alert alert-danger" role="alert"></div>
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input  th:field="*{password}" name="password" placeholder="Enter Password" class="form-control"  type=password>
+                        </div>
+                    </div>
+                </div>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <p><button type="submit" value="Sign Up" class="btn btn-success">SignUp</button></p>
+                        <p><button type="reset" value="Clear Form" class="btn btn-warning">Reset</button></p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</head>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
