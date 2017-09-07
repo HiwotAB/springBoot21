@@ -21,8 +21,8 @@ public class NewUsers {
     private boolean enabled;
     @Column(name="username")
     private String username;
-//    @Column(name="selectVal")
-//    private String selectVal;
+    @Column(name="selectVal")
+    private String selectVal;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns=@JoinColumn(name="user_id"),
@@ -103,11 +103,11 @@ public class NewUsers {
         this.roles.add(role);
     }
 
-//        public String getSelectVal() {
-//            return selectVal;
-//        }
-//
-//        public void setSelectVal(String selectVal) {
-//            this.selectVal = selectVal;
-//        }
+        public String getSelectVal() {
+            return selectVal;
+        }
+
+        public void setSelectVal(String selectVal) {
+            this.selectVal = selectVal;
+        }
 }

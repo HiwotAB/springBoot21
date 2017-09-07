@@ -67,12 +67,12 @@ public class HomeController {
         return "secure";
     }
 
-    @RequestMapping("/listRoles")
-    public String listRoles(Model model){
-        model.addAttribute("userRoles", useRoleRepo.findAll());
-
-        return "listRoles";
-    }
+//    @RequestMapping("/listRoles")
+//    public String listRoles(Model model){
+//        model.addAttribute("userRoles", useRoleRepo.findAll());
+//
+//        return "listRoles";
+//    }
     @RequestMapping("/testRoles")
     public @ResponseBody String showRoles()
     {
@@ -91,6 +91,7 @@ public class HomeController {
     @RequestMapping(value="/signUpForm",method=RequestMethod.GET)
     public String showRegistrationPage(Model model) {
         model.addAttribute("newUser", new NewUsers());
+        model.addAttribute("roleList", useRoleRepo.findAll());
         return "signUpForm";
     }
     @RequestMapping(value="/signUpForm",method=RequestMethod.POST)
@@ -99,14 +100,14 @@ public class HomeController {
         if(bindingResult.hasErrors()){
             return "signUpForm";
         }
-//        else if(user.getSelectVal().contains("USER"))        {
-//
-//            userService.saveUser(user);
-//            model.addAttribute("message","User Account Successfully Created");
-//        }
+        else if(user.getSelectVal().equalsIgnoreCase("USER"))        {
+
+            userService.saveUser(user);
+            model.addAttribute("message","User Account Successfully Created");
+        }
         else
             {
-            userService.saveUser(user);
+            userService.saveAdmin(user);
             model.addAttribute("message","User Account Successfully Created");
         }
         return "signUpConfirm";

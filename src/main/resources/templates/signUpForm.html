@@ -29,13 +29,21 @@
                                     <!-- Form Name -->
                                     <legend align="Center">Please Enter Your Information</legend>
                                     <input type="hidden" th:field="*{id}" />
-                                    <!--<label th:inline="text">Role Type</label>-->
-                                    <!--<select>-->
-                                        <!--<th:block th:each="uRole:${roleList}">-->
-                                            <!--<option th:value="${uRole.urole}"-->
-                                                    <!--th:text="${uRole.urole}"></option>-->
-                                        <!--</th:block>-->
-                                    <!--</select>-->
+
+                                    <div  th:if="${#fields.hasErrors('selectVal')}" th:errors="*{selectVal}" class="well alert alert-danger" role="alert"></div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Role Type</label>
+                                        <div class="col-md-4 inputGroupContainer">
+                                            <div class="input-group">
+                                                <select th:name="selectVal" class="form-control">
+                                                    <th:block th:each="uRole:${roleList}">
+                                                        <option th:value="${uRole.urole}"
+                                                                th:text="${uRole.urole}"></option>
+                                                    </th:block>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!-- Text input-->
                                     <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert"></div>
                                     <div class="form-group">
