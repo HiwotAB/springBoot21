@@ -106,7 +106,7 @@ public class HomeController {
 //        }
         else
             {
-//            userService.saveUser(user);
+            userService.saveUser(user);
             model.addAttribute("message","User Account Successfully Created");
         }
         return "signUpConfirm";

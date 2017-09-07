@@ -31,16 +31,16 @@ public class UserService {
         return userRepo.findByUsername(username);
 
     }
-//    public void saveUser(NewUsers user){
-//        user.setRoles(Arrays.asList(roleRepo.findByUrole("USER")));
-//        user.setEnabled(true);
-//        userRepo.save(user);
-//    }
-//    public void saveAdmin(NewUsers users){
-//        users.setRoles(Arrays.asList(roleRepo.findByUrole("ADMIN")));
-//        users.setEnabled(true);
-//        userRepo.save(users);
-//    }
+    public void saveUser(NewUsers user){
+        user.setRoles(Arrays.asList(roleRepo.findByUrole("USER")));
+        user.setEnabled(true);
+        userRepo.save(user);
+    }
+    public void saveAdmin(NewUsers users){
+        users.setRoles(Arrays.asList(roleRepo.findByUrole("ADMIN")));
+        users.setEnabled(true);
+        userRepo.save(users);
+    }
 
 
 }

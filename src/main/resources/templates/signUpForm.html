@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="base :: header">
-    <title>Add User Resume Info</title>
+    <title>Add User Info</title>
 </head>
 <body>
 <!-- Header -->
@@ -29,11 +29,12 @@
                                     <!-- Form Name -->
                                     <legend align="Center">Please Enter Your Information</legend>
                                     <input type="hidden" th:field="*{id}" />
-                                    <!--<label th:inline="text">Role Type</label>&ndash;&gt;-->
-                                    <!--<select name="selectVal" class="form-control" >-->
-                                    <!--<option th:each="roleX:${userRole}"-->
-                                    <!--th:value="${roleX.id}"-->
-                                    <!--th:text="${roleX.urole}"></option>-->
+                                    <!--<label th:inline="text">Role Type</label>-->
+                                    <!--<select>-->
+                                        <!--<th:block th:each="uRole:${roleList}">-->
+                                            <!--<option th:value="${uRole.urole}"-->
+                                                    <!--th:text="${uRole.urole}"></option>-->
+                                        <!--</th:block>-->
                                     <!--</select>-->
                                     <!-- Text input-->
                                     <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert"></div>
@@ -92,8 +93,8 @@
                                     <div class="form-group">
                                         <label class="col-md-4 control-label"></label>
                                         <div class="col-md-4">
-                                            <button type="submit" class="btn btn-success" >SignUp<span class="glyphicon glyphicon-save" ></span></button>-->
-                                            <button type="reset" class="btn btn-warning">Reset<span class="glyphicon glyphicon-clear ></span></button>
+                                            <button type="submit" class="btn btn-success" >SignUp</button>
+                                            <button type="reset" class="btn btn-warning">Reset</button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -114,7 +115,7 @@
     </div>
 </header>
 <div th:replace="base :: javaScript"></div>
-<div th:replace="base :: footer"></div>
+<!--<div th:replace="base :: footer"></div>-->
 </body>
 
 </html>

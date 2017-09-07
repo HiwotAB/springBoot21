@@ -103,11 +103,11 @@ public class NewUsers {
         this.roles.add(role);
     }
 
-    //    public String getSelectVal() {
-    //        return selectVal;
-    //    }
-    //
-    //    public void setSelectVal(String selectVal) {
-    //        this.selectVal = selectVal;
-    //    }
+//        public String getSelectVal() {
+//            return selectVal;
+//        }
+//
+//        public void setSelectVal(String selectVal) {
+//            this.selectVal = selectVal;
+//        }
 }
