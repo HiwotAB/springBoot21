@@ -1,7 +1,7 @@
 package com.hiwotab.springboot21.controller;
 
 
-import com.hiwotab.springboot21.UserService;
+import com.hiwotab.springboot21.services.UserService;
 import com.hiwotab.springboot21.model.NewUsers;
 import com.hiwotab.springboot21.model.UseRole;
 import com.hiwotab.springboot21.repositories.NewUserRepo;

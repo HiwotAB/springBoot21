@@ -1,4 +1,4 @@
-package com.hiwotab.springboot21;
+package com.hiwotab.springboot21.services;
 
 
 import com.hiwotab.springboot21.model.NewUsers;
